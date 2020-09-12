@@ -1,5 +1,18 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
 main {
-  width: 25vw;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  width: 18rem;
+}
+
+header {
+  grid-column: 1 / 3;
+  text-align: center;
 }
 
 section {
@@ -7,6 +20,70 @@ section {
   flex-direction: column;
 }
 
+#height > input, #weight > input {
+  width: 8rem;
+  font-size: 1rem;
+}
+
+#weight > label {
+  text-align: right;
+}
+
+#weight > input {
+  align-self: end;
+}
+
+#bmiSection {
+  grid-column: 1 / 3;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+}
+
 input[type=number] {
+  appearance: textfield;
+  font-family: monospace;
+  text-align: center;
   box-shadow: none;
+}
+
+input:nth-child(3) {
+  border-radius: .5rem .5rem 0 0;
+}
+
+input:nth-child(4) {
+  border-radius: 0 0 .5rem .5rem;
+}
+
+#riskDiv {
+  position: relative;
+  margin-bottom: .5rem;
+  height: 3rem;
+  width: 17rem;
+  box-shadow: inset .1rem .1rem darkgray, inset -.1rem -.1rem lightgray;
+  border-radius: .5rem;
+  background-image: linear-gradient(to right,
+                                    yellow 5%,
+                                    green 30%,
+                                    orange 60%,
+                                    red);
+  overflow: hidden;
+}
+
+#riskBar {
+  position: absolute;
+  top: .1rem;
+  left: -1%;
+  width: .1rem;
+  height: calc(3rem - .2rem);
+  background-color: black;
+  transition: left 250ms;
+}
+
+#bmiSection > input {
+  border-radius: .5rem;
+  font-size: 2rem;
+  width: 17rem;
 }

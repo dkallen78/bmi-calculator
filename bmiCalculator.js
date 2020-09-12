@@ -42,10 +42,12 @@ function convertWeight(type) {
 function getBmi(weight, height) {
   let bmi = document.getElementById("bmi");
   bmi.value = (weight / ((height / 100) ** 2)).toFixed(2);
+
+  let riskBar = document.getElementById("riskBar");
+  riskBar.style.left = `${((bmi.value - 15) / 25) * 100}%`;
 }
 
 function calcWeight() {
-  console.log("finding weight...");
   let bmi = document.getElementById("bmi");
   let cents = document.getElementById("heightMet");
   let pounds = document.getElementById("weightImp");
@@ -53,4 +55,7 @@ function calcWeight() {
 
   kilos.value = (bmi.value * ((cents.value / 100) ** 2)).toFixed(2);
   pounds.value = (kilos.value * 2.205).toFixed(2);
+
+  let riskBar = document.getElementById("riskBar");
+  riskBar.style.left = `${((bmi.value - 15) / 25) * 100}%`;
 }

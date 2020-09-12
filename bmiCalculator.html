@@ -10,38 +10,46 @@
   </head>
   <body onload="clearFields()">
     <main>
+      <header>
+        <h1>
+          BMI Calculator
+        </h1>
+      </header>
       <section id="height">
-        <p>Height</p>
+        <h2>Height</h2>
         <label for="heightImp">Inches</label>
         <input id="heightImp"
               name="heightImp"
               type="number"
               value="0"
               oninput="convertHeight('imp')">
-        <label for="heightMet">Centimeters</label>
         <input id="heightMet"
               name="heightMet"
               type="number"
               value="0"
               oninput="convertHeight('met')">
+        <label for="heightMet">Centimeters</label>
       </section>
       <section id="weight">
-        <p>Weight</p>
+        <h2>Weight</h2>
         <label for="weightImp">Pounds</label>
         <input id="weightImp"
               name="weightImp"
               type="number"
               value="0"
               oninput="convertWeight('imp')">
-        <label for="weightMet">Kilograms</label>
         <input id="weightMet"
               name="weightMet"
               type="number"
               value="0"
               oninput="convertWeight('met')">
+        <label for="weightMet">Kilograms</label>
       </section>
       <section id="bmiSection">
-        <p>Body Mass Index</p>
+        <h2>Body Mass Index</h2>
+        <div id="riskDiv">
+          <div id="riskBar"></div>
+        </div>
         <input id="bmi"
               name="bmi"
               type="number"
