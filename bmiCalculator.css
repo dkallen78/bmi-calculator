@@ -1,13 +1,24 @@
 body {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(to top right,
+                                    blue, white);
 }
 
 main {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 1rem;
+  height: min-content;
   width: 18rem;
+  padding: 1rem;
+  background-color: white;
+  border: .1rem solid black;
+  border-radius: .5rem;
+  box-shadow: -.1rem .1rem .5rem black;
 }
 
 header {
@@ -45,6 +56,7 @@ h2 {
 input[type=number] {
   appearance: textfield;
   font-family: monospace;
+  font-weight: bold;
   text-align: center;
   box-shadow: none;
 }
@@ -70,6 +82,10 @@ input:nth-child(4) {
                                     orange 60%,
                                     red);
   overflow: hidden;
+}
+
+#health {
+
 }
 
 #riskBar {
