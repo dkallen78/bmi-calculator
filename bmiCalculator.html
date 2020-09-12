@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      BMI Calculator
+    </title>
+    <link rel="stylesheet" href="bmiCalculator.css">
+  </head>
+  <body onload="clearFields()">
+    <main>
+      <section id="height">
+        <p>Height</p>
+        <label for="heightImp">Inches</label>
+        <input id="heightImp"
+              name="heightImp"
+              type="number"
+              value="0"
+              oninput="convertHeight('imp')">
+        <label for="heightMet">Centimeters</label>
+        <input id="heightMet"
+              name="heightMet"
+              type="number"
+              value="0"
+              oninput="convertHeight('met')">
+      </section>
+      <section id="weight">
+        <p>Weight</p>
+        <label for="weightImp">Pounds</label>
+        <input id="weightImp"
+              name="weightImp"
+              type="number"
+              value="0"
+              oninput="convertWeight('imp')">
+        <label for="weightMet">Kilograms</label>
+        <input id="weightMet"
+              name="weightMet"
+              type="number"
+              value="0"
+              oninput="convertWeight('met')">
+      </section>
+      <section id="bmiSection">
+        <p>Body Mass Index</p>
+        <input id="bmi"
+              name="bmi"
+              type="number"
+              value="0"
+              oninput="calcWeight()">
+      </section>
+    </main>
+  </body>
+  <script src="bmiCalculator.js">
+  </script>
+</html>

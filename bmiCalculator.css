@@ -1,0 +1,12 @@
+main {
+  width: 25vw;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type=number] {
+  box-shadow: none;
+}
